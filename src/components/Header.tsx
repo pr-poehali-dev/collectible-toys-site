@@ -14,7 +14,7 @@ const Header = () => {
               </span>
             </div>
             <span className="text-xl font-bold text-red-600 font-montserrat">
-              Пуп март
+              Пуп Март
             </span>
           </Link>
 
