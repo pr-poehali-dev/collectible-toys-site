@@ -36,7 +36,7 @@ const ProductCard = ({
           </div>
 
           <h3 className="font-semibold text-gray-900 mb-1 font-montserrat">
-            Упоротые Гномы
+            Смешарики
           </h3>
 
           <div className="flex items-center justify-between">
