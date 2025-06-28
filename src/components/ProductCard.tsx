@@ -1,6 +1,7 @@
-import { Plus, Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import Icon from "@/components/ui/icon";
 
 interface ProductCardProps {
   id: number;
@@ -10,60 +11,77 @@ interface ProductCardProps {
   image?: string;
 }
 
-const ProductCard = ({
-  id,
-  color,
-  colorName,
-  isRare = false,
-  image,
-}: ProductCardProps) => {
+const ProductCard = ({ color, colorName, isRare, image }: ProductCardProps) => {
+  const phoneNumber = "+7 (999) 123-45-67";
+  const telegramLink = `https://t.me/pupmart_orders`;
+  const whatsappLink = `https://wa.me/79991234567`;
+
+  const handleTelegramOrder = () => {
+    const message = `Хочу заказать коробочку: ${colorName}`;
+    window.open(
+      `${telegramLink}?text=${encodeURIComponent(message)}`,
+      "_blank",
+    );
+  };
+
+  const handleWhatsAppOrder = () => {
+    const message = `Хочу заказать коробочку: ${colorName}`;
+    window.open(
+      `${whatsappLink}?text=${encodeURIComponent(message)}`,
+      "_blank",
+    );
+  };
+
   return (
-    <Card className="group hover:shadow-lg transition-shadow duration-200 border-gray-200 hover:border-red-200">
+    <Card className="group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
       <CardContent className="p-4">
-        <div className="relative">
+        <div className="relative mb-4">
           {image ? (
-            <div className="w-full h-32 rounded-lg mb-3 border-2 border-gray-100 flex items-center justify-center relative overflow-hidden bg-white">
-              <img
-                src={image}
-                alt={colorName}
-                className="w-full h-full object-contain"
-              />
-              {isRare && (
-                <div className="absolute top-2 right-2 bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-bold flex items-center">
-                  <Star className="w-3 h-3 mr-1" />
-                  Редкая
-                </div>
-              )}
-            </div>
+            <img
+              src={image}
+              alt={`Коробочка ${colorName}`}
+              className="w-full h-48 object-cover rounded-lg"
+            />
           ) : (
             <div
-              className="w-full h-32 rounded-lg mb-3 border-2 border-gray-100 flex items-center justify-center relative overflow-hidden"
+              className="w-full h-48 rounded-lg flex items-center justify-center"
               style={{ backgroundColor: color }}
             >
-              <div className="w-16 h-20 bg-white/20 rounded-sm border border-white/30 flex items-center justify-center">
-                <span className="text-white/80 text-xs font-medium">🎲</span>
-              </div>
-              {isRare && (
-                <div className="absolute top-2 right-2 bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-bold flex items-center">
-                  <Star className="w-3 h-3 mr-1" />
-                  Редкая
-                </div>
-              )}
+              <span className="text-white/80 text-4xl">🎲</span>
             </div>
           )}
+          {isRare && (
+            <Badge className="absolute top-2 right-2 bg-yellow-500 hover:bg-yellow-600">
+              Редкая
+            </Badge>
+          )}
+        </div>
 
-          <h3 className="font-semibold text-gray-900 mb-1 font-montserrat">
-            Бумажный сюрприз
-          </h3>
+        <div className="space-y-3">
+          <div>
+            <h3 className="font-semibold text-gray-900 font-montserrat">
+              Коробочка {colorName}
+            </h3>
+            <p className="text-red-600 font-bold text-lg">1 ₽</p>
+          </div>
 
-          <div className="flex items-center justify-between">
-            <span className="text-lg font-bold text-red-600">1 ₽</span>
-
+          <div className="flex space-x-2">
             <Button
               size="sm"
-              className="bg-red-600 hover:bg-red-700 text-white"
+              className="flex-1 bg-blue-500 hover:bg-blue-600"
+              onClick={handleTelegramOrder}
             >
-              <Plus className="w-4 h-4 mr-1" />В корзину
+              <Icon name="Send" size={16} className="mr-1" />
+              Telegram
+            </Button>
+            <Button
+              size="sm"
+              variant="outline"
+              className="flex-1 border-green-500 text-green-600 hover:bg-green-50"
+              onClick={handleWhatsAppOrder}
+            >
+              <Icon name="MessageCircle" size={16} className="mr-1" />
+              WhatsApp
             </Button>
           </div>
         </div>

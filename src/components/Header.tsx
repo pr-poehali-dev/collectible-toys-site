@@ -40,20 +40,6 @@ const Header = () => {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <Link to="/cart">
-              <Button
-                variant="outline"
-                size="sm"
-                className="relative border-red-200 hover:bg-red-50"
-              >
-                <ShoppingCart className="h-4 w-4" />
-                <span className="ml-2 hidden sm:inline">Корзина</span>
-                <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                  0
-                </span>
-              </Button>
-            </Link>
-
             <Button variant="ghost" size="sm" className="md:hidden">
               <Menu className="h-4 w-4" />
             </Button>

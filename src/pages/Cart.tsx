@@ -1,103 +1,115 @@
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Minus, Plus, Trash2 } from "lucide-react";
+import Icon from "@/components/ui/icon";
 
 const Cart = () => {
-  const cartItems = [
-    { id: 1, color: "#ef4444", colorName: "Красная", quantity: 2 },
-    { id: 2, color: "#3b82f6", colorName: "Синяя", quantity: 1 },
-  ];
-
-  const total = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+  const phoneNumber = "+7 (999) 123-45-67";
+  const telegramUsername = "@pupmart_orders";
+  const whatsappLink = `https://wa.me/79991234567`;
+  const telegramLink = `https://t.me/pupmart_orders`;
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
 
       <div className="max-w-4xl mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8 font-montserrat">
-          Корзина
-        </h1>
+        <div className="text-center mb-8">
+          <h1 className="text-3xl font-bold text-gray-900 mb-4 font-montserrat">
+            Оформление заказа
+          </h1>
+          <p className="text-gray-600 text-lg">
+            Для заказа коробочек свяжитесь с нами удобным способом
+          </p>
+        </div>
 
-        {cartItems.length === 0 ? (
-          <div className="text-center py-16">
-            <p className="text-gray-600 text-lg mb-4">Ваша корзина пуста</p>
-            <Button className="bg-red-600 hover:bg-red-700">
-              Перейти в каталог
-            </Button>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-2 space-y-4">
-              {cartItems.map((item) => (
-                <Card key={item.id}>
-                  <CardContent className="p-4">
-                    <div className="flex items-center space-x-4">
-                      <div
-                        className="w-16 h-16 rounded-lg border-2 border-gray-100 flex items-center justify-center"
-                        style={{ backgroundColor: item.color }}
-                      >
-                        <span className="text-white/80">🎲</span>
-                      </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardContent className="p-6 text-center">
+              <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Icon name="Send" size={32} className="text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2 font-montserrat">
+                Telegram
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Быстрое оформление заказа в мессенджере
+              </p>
+              <p className="text-sm text-gray-500 mb-4">{telegramUsername}</p>
+              <Button
+                className="w-full bg-blue-500 hover:bg-blue-600"
+                onClick={() => window.open(telegramLink, "_blank")}
+              >
+                Написать в Telegram
+              </Button>
+            </CardContent>
+          </Card>
 
-                      <div className="flex-1">
-                        <h3 className="font-semibold text-gray-900 font-montserrat">
-                          Коробочка {item.colorName}
-                        </h3>
-                        <p className="text-red-600 font-bold">1 ₽</p>
-                      </div>
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardContent className="p-6 text-center">
+              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Icon name="MessageCircle" size={32} className="text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2 font-montserrat">
+                WhatsApp
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Удобное общение через WhatsApp
+              </p>
+              <p className="text-sm text-gray-500 mb-4">{phoneNumber}</p>
+              <Button
+                className="w-full bg-green-500 hover:bg-green-600"
+                onClick={() => window.open(whatsappLink, "_blank")}
+              >
+                Написать в WhatsApp
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
 
-                      <div className="flex items-center space-x-2">
-                        <Button variant="outline" size="sm">
-                          <Minus className="w-4 h-4" />
-                        </Button>
-                        <span className="w-8 text-center font-medium">
-                          {item.quantity}
-                        </span>
-                        <Button variant="outline" size="sm">
-                          <Plus className="w-4 h-4" />
-                        </Button>
-                        <Button
-                          variant="ghost"
-                          size="sm"
-                          className="text-red-600 hover:bg-red-50"
-                        >
-                          <Trash2 className="w-4 h-4" />
-                        </Button>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            <div>
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4 font-montserrat">
-                    Итого
-                  </h3>
-
-                  <div className="space-y-2 mb-4">
-                    <div className="flex justify-between">
-                      <span>Товары ({total} шт.)</span>
-                      <span>{total} ₽</span>
-                    </div>
-                    <div className="flex justify-between font-bold text-lg">
-                      <span>К оплате</span>
-                      <span className="text-red-600">{total} ₽</span>
-                    </div>
-                  </div>
-
-                  <Button className="w-full bg-red-600 hover:bg-red-700">
-                    Оформить заказ
-                  </Button>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        )}
+        <div className="mt-12 text-center">
+          <Card className="max-w-2xl mx-auto">
+            <CardContent className="p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4 font-montserrat">
+                Как сделать заказ?
+              </h3>
+              <div className="text-left space-y-3">
+                <div className="flex items-start space-x-3">
+                  <span className="bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
+                    1
+                  </span>
+                  <p className="text-gray-700">
+                    Выберите цвет коробочки из каталога
+                  </p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <span className="bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
+                    2
+                  </span>
+                  <p className="text-gray-700">
+                    Напишите нам в Telegram или WhatsApp
+                  </p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <span className="bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
+                    3
+                  </span>
+                  <p className="text-gray-700">
+                    Укажите количество и адрес доставки
+                  </p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <span className="bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
+                    4
+                  </span>
+                  <p className="text-gray-700">
+                    Оплатите заказ и получите коробочки!
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
       </div>
     </div>
   );
