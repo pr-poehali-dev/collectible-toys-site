@@ -10,6 +10,8 @@ const Catalog = () => {
       color: "#ef4444",
       colorName: "Красная-Упоротые Гномы",
       isRare: false,
+      image:
+        "https://cdn.poehali.dev/files/fa1301e2-702e-4c50-aeef-bd94daf59f54.png",
     },
     { id: 2, color: "#3b82f6", colorName: "Синяя-Смешарики", isRare: true },
     { id: 3, color: "#10b981", colorName: "Зеленая-Микробики", isRare: false },
