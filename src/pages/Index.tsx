@@ -20,7 +20,14 @@ const Index = () => {
       image:
         "https://cdn.poehali.dev/files/47fd93a3-d045-4859-9ab8-9a1ef5f67a81.png",
     },
-    { id: 3, color: "#10b981", colorName: "Зеленая-Микробики", isRare: false },
+    {
+      id: 3,
+      color: "#10b981",
+      colorName: "Зеленая-Микробики",
+      isRare: false,
+      image:
+        "https://cdn.poehali.dev/files/9a3a121f-f035-48c7-b5fd-22c342317ed3.png",
+    },
   ];
 
   return (
