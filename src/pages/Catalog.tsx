@@ -17,7 +17,7 @@ const Catalog = () => {
       id: 2,
       color: "#3b82f6",
       colorName: "Синяя-Смешарики",
-      isRare: true,
+      isRare: false,
       image:
         "https://cdn.poehali.dev/files/47fd93a3-d045-4859-9ab8-9a1ef5f67a81.png",
     },
@@ -41,7 +41,7 @@ const Catalog = () => {
       id: 5,
       color: "#8b5cf6",
       colorName: "Синяя-Чувачок Продакшн",
-      isRare: true,
+      isRare: false,
       image:
         "https://cdn.poehali.dev/files/d23898aa-e580-4ec0-bf2d-d13186108aea.png",
     },
