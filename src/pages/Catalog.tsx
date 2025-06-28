@@ -21,12 +21,6 @@ const Catalog = () => {
       isRare: true,
     },
     { id: 6, color: "#ec4899", colorName: "Розовая", isRare: false },
-    { id: 7, color: "#06b6d4", colorName: "Голубая", isRare: false },
-    { id: 8, color: "#84cc16", colorName: "Лаймовая", isRare: true },
-    { id: 9, color: "#f97316", colorName: "Оранжевая-Фуглеры", isRare: false },
-    { id: 10, color: "#6b7280", colorName: "Серая", isRare: false },
-    { id: 11, color: "#1f2937", colorName: "Чёрная", isRare: true },
-    { id: 12, color: "#fbbf24", colorName: "Золотая", isRare: true },
   ];
 
   return (
