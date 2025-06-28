@@ -4,10 +4,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 
 const Cart = () => {
-  const phoneNumber = "+7 (999) 123-45-67";
-  const telegramUsername = "@pupmart_orders";
-  const whatsappLink = `https://wa.me/79991234567`;
-  const telegramLink = `https://t.me/pupmart_orders`;
+  const phoneNumber = "+7 (905) 734-78-21";
+  const telegramUsername = "@GOGOLvPODVALE";
+  const whatsappLink = `https://wa.me/79057347821`;
+  const telegramLink = `https://t.me/GOGOLvPODVALE`;
 
   return (
     <div className="min-h-screen bg-gray-50">

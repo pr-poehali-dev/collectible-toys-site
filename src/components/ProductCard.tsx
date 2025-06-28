@@ -12,9 +12,9 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ color, colorName, isRare, image }: ProductCardProps) => {
-  const phoneNumber = "+7 (999) 123-45-67";
-  const telegramLink = `https://t.me/pupmart_orders`;
-  const whatsappLink = `https://wa.me/79991234567`;
+  const phoneNumber = "+7 (905) 734-78-21";
+  const telegramLink = `https://t.me/GOGOLvPODVALE`;
+  const whatsappLink = `https://wa.me/79057347821`;
 
   const handleTelegramOrder = () => {
     const message = `Хочу заказать коробочку: ${colorName}`;
