@@ -59,9 +59,6 @@ const ProductCard = ({ color, colorName, isRare, image }: ProductCardProps) => {
 
         <div className="space-y-3">
           <div>
-            <h3 className="font-semibold text-gray-900 font-montserrat">
-              Коробочка {colorName}
-            </h3>
             <p className="text-red-600 font-bold text-lg">1 ₽</p>
           </div>
 
