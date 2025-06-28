@@ -42,6 +42,8 @@ const Catalog = () => {
       color: "#8b5cf6",
       colorName: "Синяя-Чувачок Продакшн",
       isRare: true,
+      image:
+        "https://cdn.poehali.dev/files/d23898aa-e580-4ec0-bf2d-d13186108aea.png",
     },
     { id: 6, color: "#ec4899", colorName: "Розовая", isRare: false },
   ];
