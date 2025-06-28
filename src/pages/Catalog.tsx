@@ -13,7 +13,14 @@ const Catalog = () => {
       image:
         "https://cdn.poehali.dev/files/fa1301e2-702e-4c50-aeef-bd94daf59f54.png",
     },
-    { id: 2, color: "#3b82f6", colorName: "Синяя-Смешарики", isRare: true },
+    {
+      id: 2,
+      color: "#3b82f6",
+      colorName: "Синяя-Смешарики",
+      isRare: true,
+      image:
+        "https://cdn.poehali.dev/files/47fd93a3-d045-4859-9ab8-9a1ef5f67a81.png",
+    },
     { id: 3, color: "#10b981", colorName: "Зеленая-Микробики", isRare: false },
     { id: 4, color: "#f59e0b", colorName: "Розовая-Пони", isRare: false },
     {
