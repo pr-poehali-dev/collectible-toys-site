@@ -4,12 +4,22 @@ import ProductCard from "@/components/ProductCard";
 
 const Index = () => {
   const featuredProducts = [
-    { id: 1, color: "#ef4444", colorName: "Красная", isRare: false },
-    { id: 2, color: "#3b82f6", colorName: "Синяя", isRare: true },
-    { id: 3, color: "#10b981", colorName: "Зелёная", isRare: false },
-    { id: 4, color: "#f59e0b", colorName: "Жёлтая", isRare: false },
-    { id: 5, color: "#8b5cf6", colorName: "Фиолетовая", isRare: true },
-    { id: 6, color: "#ec4899", colorName: "Розовая", isRare: false },
+    {
+      id: 1,
+      color: "#ef4444",
+      colorName: "Красная-Упоротые Гномы",
+      isRare: false,
+    },
+    { id: 2, color: "#3b82f6", colorName: "Синяя-Смешарики", isRare: true },
+    { id: 3, color: "#10b981", colorName: "Зеленая-Микробики", isRare: false },
+    { id: 4, color: "#f59e0b", colorName: "Оранжевая-Фуглеры", isRare: false },
+    {
+      id: 5,
+      color: "#8b5cf6",
+      colorName: "Синяя-Чувачок Продакшн",
+      isRare: true,
+    },
+    { id: 6, color: "#ec4899", colorName: "Розовая-Пони", isRare: false },
   ];
 
   return (

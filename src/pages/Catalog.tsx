@@ -5,15 +5,25 @@ import { Filter } from "lucide-react";
 
 const Catalog = () => {
   const allProducts = [
-    { id: 1, color: "#ef4444", colorName: "Красная", isRare: false },
-    { id: 2, color: "#3b82f6", colorName: "Синяя", isRare: true },
-    { id: 3, color: "#10b981", colorName: "Зелёная", isRare: false },
-    { id: 4, color: "#f59e0b", colorName: "Жёлтая", isRare: false },
-    { id: 5, color: "#8b5cf6", colorName: "Фиолетовая", isRare: true },
+    {
+      id: 1,
+      color: "#ef4444",
+      colorName: "Красная-Упоротые Гномы",
+      isRare: false,
+    },
+    { id: 2, color: "#3b82f6", colorName: "Синяя-Смешарики", isRare: true },
+    { id: 3, color: "#10b981", colorName: "Зеленая-Микробики", isRare: false },
+    { id: 4, color: "#f59e0b", colorName: "Розовая-Пони", isRare: false },
+    {
+      id: 5,
+      color: "#8b5cf6",
+      colorName: "Синяя-Чувачок Продакшн",
+      isRare: true,
+    },
     { id: 6, color: "#ec4899", colorName: "Розовая", isRare: false },
     { id: 7, color: "#06b6d4", colorName: "Голубая", isRare: false },
     { id: 8, color: "#84cc16", colorName: "Лаймовая", isRare: true },
-    { id: 9, color: "#f97316", colorName: "Оранжевая", isRare: false },
+    { id: 9, color: "#f97316", colorName: "Оранжевая-Фуглеры", isRare: false },
     { id: 10, color: "#6b7280", colorName: "Серая", isRare: false },
     { id: 11, color: "#1f2937", colorName: "Чёрная", isRare: true },
     { id: 12, color: "#fbbf24", colorName: "Золотая", isRare: true },
