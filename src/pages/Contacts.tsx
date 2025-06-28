@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Clock, Phone, Mail } from "lucide-react";
+import { Phone, MessageCircle } from "lucide-react";
 
 const Contacts = () => {
   return (
@@ -25,37 +25,18 @@ const Contacts = () => {
 
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
-                    <MapPin className="w-5 h-5 text-red-600 mt-1" />
-                    <div>
-                      <p className="font-medium text-gray-900">Адрес</p>
-                      <p className="text-gray-600">
-                        ул. Коллекционная, 123, Москва
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-3">
-                    <Clock className="w-5 h-5 text-red-600 mt-1" />
-                    <div>
-                      <p className="font-medium text-gray-900">Часы работы</p>
-                      <p className="text-gray-600">Пн-Пт: 10:00-20:00</p>
-                      <p className="text-gray-600">Сб-Вс: 11:00-18:00</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-3">
                     <Phone className="w-5 h-5 text-red-600 mt-1" />
                     <div>
                       <p className="font-medium text-gray-900">Телефон</p>
-                      <p className="text-gray-600">+7 (495) 123-45-67</p>
+                      <p className="text-gray-600">+7 905 734 78 21</p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <Mail className="w-5 h-5 text-red-600 mt-1" />
+                    <MessageCircle className="w-5 h-5 text-red-600 mt-1" />
                     <div>
-                      <p className="font-medium text-gray-900">Email</p>
-                      <p className="text-gray-600">info@pupmart.ru</p>
+                      <p className="font-medium text-gray-900">Telegram</p>
+                      <p className="text-gray-600">@GOGOLvPODVALE</p>
                     </div>
                   </div>
                 </div>
