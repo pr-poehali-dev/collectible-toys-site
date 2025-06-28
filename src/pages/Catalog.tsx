@@ -45,7 +45,14 @@ const Catalog = () => {
       image:
         "https://cdn.poehali.dev/files/d23898aa-e580-4ec0-bf2d-d13186108aea.png",
     },
-    { id: 6, color: "#ec4899", colorName: "Розовая", isRare: false },
+    {
+      id: 6,
+      color: "#ec4899",
+      colorName: "Розовая-Чувачок Продакшн",
+      isRare: true,
+      image:
+        "https://cdn.poehali.dev/files/7fa9e51b-5c64-494b-9f9e-5f268e5ecea2.png",
+    },
   ];
 
   return (
